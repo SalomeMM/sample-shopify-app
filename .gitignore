@@ -1,0 +1,10 @@
+#node_modules
+node_modules
+
+#keys
+.env
+
+#next
+.next
+# .next\server\pages\_app.js
+# .next\static\chunks\pages\_app.js
