@@ -30,26 +30,27 @@ const handle = app.getRequestHandler();
 const { SHOPIFY_API_SECRET_KEY, SHOPIFY_API_KEY } = process.env;
 
 const server = new Koa(); // create server
-const router = new KoaRouter();
+const router = new KoaRouter(); // to route to our API point
 
-var products = [];
+var products = []; // we are gonna save the products here
 
-router.get('/api/products', async (ctx) => {
-  try {
+router.get('/api/products', async (ctx) => { // simple endpoint
+  try { // instead of breaking the API, it gives an error to work with
     ctx.body = {
       status: 'success',
-      data: products
+      data: products // empty array where we will save our products
     }
   } catch (error) {
     console.log(error)
   }
 })
 
+// post request will allow us to show the selected/uploaded products in our frontend
 router.post('/api/products', koaBody(), async (ctx) => {
   try {
-    const body = ctx.request.body;
-    await products.push(body)
-    ctx.body = "Item Added"
+    const body = ctx.request.body; // takes the info that we are sending with our post request and saves it in our body
+    await products.push(body) // that info we take, we save in the variable (empty array) "products"
+    ctx.body = "Item Added" // not for the actual user, but useful for development
   } catch (error) {
     console.log(error)
   }
@@ -66,7 +67,8 @@ router.delete('/api/products', koaBody(), async (ctx) => {
 
 // Router Middleware
 server.use(router.allowedMethods());
-server.use(router.routes());
+server.use(router.routes()); 
+// we need to do this to basically use the router
 
 app.prepare().then(() => {
   
