@@ -33,6 +33,7 @@ const server = new Koa(); // create server
 const router = new KoaRouter(); // to route to our API point
 
 var products = []; // we are gonna save the products here
+// in the future we can use mongoDB or another database instead of saving al our products into a variable
 
 router.get('/api/products', async (ctx) => { // simple endpoint
   try { // instead of breaking the API, it gives an error to work with
@@ -56,6 +57,7 @@ router.post('/api/products', koaBody(), async (ctx) => {
   }
 })
 
+// this is gonna reset our products array:
 router.delete('/api/products', koaBody(), async (ctx) => {
   try {
     products = [];
