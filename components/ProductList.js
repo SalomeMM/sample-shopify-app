@@ -30,7 +30,7 @@ query getProducts($ids: [ID!]!) {
     }
   }
 `;
-// now we need to create the component that is going to display all of these things
+// now we need to create the component that is going to display all of these things:
 
 function ProductList() {
 
