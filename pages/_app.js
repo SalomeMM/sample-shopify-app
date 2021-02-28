@@ -17,7 +17,6 @@ import { ApolloProvider } from 'react-apollo';
 // const { ApolloClient } = require('apollo-client')
 
 const client = new ApolloClient({
-    // uri: 'https://public-apps.com/graphql',
     fetchOptions: {
         credentials: 'include'
     }

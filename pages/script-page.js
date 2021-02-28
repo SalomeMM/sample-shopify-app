@@ -52,6 +52,8 @@ function ScriptPage() {
   if (loading) return <div>Loading…</div>;
   if (error) return <div>{error.message}</div>;
 
+  // console.log("this is script data", data);
+
   return (
     <Page>
       <Layout>
@@ -71,7 +73,7 @@ function ScriptPage() {
                 createScripts({
                   variables: {
                     input: {
-                      src: "https://061cf6610286.ngrok.io/test-script.js",
+                      src: "https://facd1e2e89c5.ngrok.io/test-script.js",
                       displayScope: "ALL",
                     },
                   },
