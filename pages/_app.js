@@ -6,31 +6,31 @@ import { Provider } from '@shopify/app-bridge-react'
 import '@shopify/polaris/dist/styles.css';
 import translations from '@shopify/polaris/locales/en.json';
 import Cookies from 'js-cookie';
-// import ApolloClient from 'apollo-boost';
-import ApolloClient from 'apollo-client';
-// import { ApolloProvider } from 'react-apollo';
-import { ApolloProvider } from '@apollo/client'
-import { createHttpLink } from "apollo-link-http";
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import ApolloClient from 'apollo-boost';
+// import ApolloClient from 'apollo-client';
+import { ApolloProvider } from 'react-apollo';
+// import { ApolloProvider } from '@apollo/client'
+// import { createHttpLink } from "apollo-link-http";
+// import { InMemoryCache } from 'apollo-cache-inmemory';
 
 
 // const { ApolloClient } = require('apollo-client')
 
-// const client = new ApolloClient({
-//     fetchOptions: {
-//         credentials: 'include'
-//     }
-// });
+const client = new ApolloClient({
+    fetchOptions: {
+        credentials: 'include'
+    }
+});
 
 // const cache = new InMemoryCache();
 
-const client = new ApolloClient({
-    cache: new InMemoryCache(),
-    link: createHttpLink({
-    //   uri: API_URL,
-      fetch: fetch,
-    }),
-  })
+// const client = new ApolloClient({
+//     cache: new InMemoryCache(),
+//     link: createHttpLink({
+//     //   uri: API_URL,
+//       fetch: fetch,
+//     }),
+//   })
 
 
 // const link = createHttpLink({
