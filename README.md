@@ -7,13 +7,13 @@ Made with React, Node.js, Koa, GraphQL, Apollo, Next.js, Polaris, Shopify Script
 
 If you plan to use this completed app, then make sure that you first complete these setup instructions:
 
-Install the latest stable version of Node.js.
-Install npm packages (run: npm install).
-Expose your dev environment.
-Get a Shopify API key and Shopify API secret key.
-Add the Shopify API key and Shopify API secret key.
-Add HOST='http://{your_forwarding_id}.ngrok.io'
-Start your app (run: npm run dev).
-Authenticate and test your app.
-Set up your app navigation.
-Add your ngrok url as Host.
+Install the latest stable version of Node.js.  
+Install npm packages (run: npm install).  
+Expose your dev environment.  
+Get a Shopify API key and Shopify API secret key.  
+Add the Shopify API key and Shopify API secret key.  
+Add HOST='http://{your_forwarding_id}.ngrok.io'  
+Start your app (run: npm run dev).  
+Authenticate and test your app.  
+Set up your app navigation.  
+Add your ngrok url as Host.  
